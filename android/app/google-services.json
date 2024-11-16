@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "439983190144",
+    "project_id": "sign-language-master-ce104",
+    "storage_bucket": "sign-language-master-ce104.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439983190144:android:029331f423a1bb5de77665",
+        "android_client_info": {
+          "package_name": "com.example.sign_lagnuage_master"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5BMrcDkk1DxN2JtTzbjOHTkY6kfQCBwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

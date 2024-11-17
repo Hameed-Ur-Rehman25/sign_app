@@ -4,6 +4,7 @@ import 'package:sign_language_master/screens/login_screen.dart';
 import 'package:sign_language_master/screens/sign_up_screen.dart';
 import 'HomeScreen.dart';
 import 'asl/text_to_video.dart';
+import 'screens/quiz_screen.dart';
 // Import all necessary pages
 
 class AppRoutes {
@@ -17,6 +18,7 @@ class AppRoutes {
   static const categoryAlphabets = '/category_Alphabets';
   static const login = '/login';
   static const signup = '/signup';
+  static const quiz = '/quiz';
 
   // Add routes for individual categories
   static const String animals = '/animals';
@@ -48,6 +50,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (context) => LoginScreen());
       case signup:
         return MaterialPageRoute(builder: (context) => SignUpScreen());
+      case quiz:
+        return MaterialPageRoute(builder: (context) => QuizScreen());
       default:
         return MaterialPageRoute(
             builder: (context) => const Scaffold(

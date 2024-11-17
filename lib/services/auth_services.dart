@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:sign_language_master/models/user_model.dart';
 
 class AuthService {
   final FirebaseAuth _auth;
@@ -139,4 +138,18 @@ class AuthService {
       return e.message;
     }
   }
+}
+
+class QuizQuestion {
+  final String question;
+  final List<String> options;
+  final String correctAnswer;
+  final String videoPath;
+
+  QuizQuestion({
+    required this.question,
+    required this.options,
+    required this.correctAnswer,
+    required this.videoPath,
+  });
 }

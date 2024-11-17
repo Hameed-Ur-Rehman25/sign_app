@@ -11,6 +11,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:sign_language_master/MainScreen.dart';
 import 'package:sign_language_master/routes.dart';
 import 'package:sign_language_master/screens/login_screen.dart';
+import 'package:sign_language_master/screens/quiz_screen.dart';
 import 'package:sign_language_master/utils/colors.dart';
 
 import 'firebase_options.dart';
@@ -92,21 +93,22 @@ class MyApp extends StatelessWidget {
           titleTextStyle: TextStyle(color: AppColors.textColor, fontSize: 20),
         ),
       ),
-      home: StreamBuilder(
-        stream: FirebaseAuth.instance.authStateChanges(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          }
+      // home: StreamBuilder(
+      //   stream: FirebaseAuth.instance.authStateChanges(),
+      //   builder: (context, snapshot) {
+      //     if (snapshot.connectionState == ConnectionState.waiting) {
+      //       return const Center(child: CircularProgressIndicator());
+      //     }
 
-          if (snapshot.hasData) {
-            return MainScreen();
-          }
+      //     if (snapshot.hasData) {
+      //       return MainScreen();
+      //     }
 
-          return LoginScreen();
-        },
-      ),
-      onGenerateRoute: AppRoutes.generateRoute,
+      //     return LoginScreen();
+      //   },
+      // ),
+      // onGenerateRoute: AppRoutes.generateRoute,
+      home: QuizScreen(),
     );
   }
 }
